@@ -8,7 +8,7 @@ import Test from "@/components/Test";
 export default function Home() {
   return (
 
-    <div className="overflow-hidden select-none">
+    <div className="select-none">
       <Header />
       <Info />
       <Item />
