@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none overflow-hidden`}
       >
         <div className="fixed inset-40 opacity-60 z-0 pointer-events-none">
   <img
-    src="/images/214.png"
+    src="/images/Hight Qulity.png"
     alt="Background Logo"
     className="w-full h-full object-contain object-center"
   />
