@@ -4,8 +4,6 @@ html,body {
     scroll-behavior: smooth;
     font-family: 'Cairo-Bold', 'Noto Sans Arabic', sans-serif;
     background-color: #f4d7e6;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 @font-face {
