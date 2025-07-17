@@ -60,7 +60,7 @@ const Header = () => {
             <h1
               ref={textRef}
               dir="rtl"
-              className="text-4xl font-bold text-black drop-shadow-lg whitespace-nowrap"
+              className="text-4xl font-bold text-black drop-shadow-lg lg:whitespace-nowrap"
             >
               <AnimatedTitle1 title={slides[currentSlide].title} isArabic />
             </h1>
