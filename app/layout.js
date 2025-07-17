@@ -17,14 +17,14 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "RiZe",
   description: "Discover stylish and high-quality bags crafted with care. Perfect for daily use, travel, or gifts — designed to suit every personality.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased select-none overflow-hidden`}
       >
