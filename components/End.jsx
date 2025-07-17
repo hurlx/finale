@@ -38,6 +38,9 @@ export default function GlassMorphCard({ product }) {
 						<p className="text-sm text-white/80 mb-3">
 							{product.shortDescription}
 						</p>
+						<div className="flex justify-between items-center">
+						<span className="text-md font-bold">ل س{product.price}</span>
+					</div>
 					</div>
 				</div>
 			</Link>
