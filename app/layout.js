@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}
       >
         <div className="fixed inset-40 opacity-60 z-0 pointer-events-none">
   <img
