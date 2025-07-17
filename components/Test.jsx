@@ -1,3 +1,5 @@
+import { abilities } from "@/constants";
+import GlowCard from "./GlowCard";
 
 const Test = () => {
   return (
@@ -48,6 +50,18 @@ const Test = () => {
 					</div>
 				</div>
 			</section>
+			<div className="lg:columns-3 md:columns-2 columns-1 mt-16">
+          {abilities.map((abilities, index) => (
+            <GlowCard card={abilities} key={index} index={index}>
+              <div className="flex items-center gap-3">
+                <div>
+                  <p className="font-bold">{abilities.title}</p>
+                  <p className="text-white-50">{abilities.desc}</p>
+                </div>
+              </div>
+            </GlowCard>
+          ))}
+        </div>
 		</div>
   );
 };
