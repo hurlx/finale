@@ -11,8 +11,9 @@ const Test = () => {
 			<section className="text-center mb-20">
 				<h1 className="text-5xl font-bold mb-4">من نحن</h1>
 				<p className="text-lg text-gray-500 max-w-2xl mx-auto">
-					قصتنا بدأت برغبتنا في خلق تجربة تسوق مميزة وموثوقة تمنحك
-					الأناقة التي تستحقينها
+					نحن متجر إلكتروني سوري متخصص في بيع الحقائب النسائية المستوردة .
+نقدم لكِ تشكيلة واسعة من التصاميم العصرية والممييزة.
+
 				</p>
 			</section>
 
@@ -24,29 +25,23 @@ const Test = () => {
 				</p>
 			</section>
 
-			{/* Services 
+			{/* Services */}
 			<section className="max-w-4xl mx-auto mb-16">
-				<h2 className="text-3xl font-semibold mb-4">خدماتنا</h2>
-				<ul className="list-disc list-inside text-gray-500 space-y-2">
-					<li>شحن سريع وموثوق لجميع أنحاء المنطقة</li>
-					<li>دعم عملاء عالي الجودة على مدار الساعة</li>
-					<li>سهولة في الاستبدال والإرجاع</li>
-					<li>تشكيلات حصرية وطلبات مخصصة</li>
-				</ul>
+				<h2 className="text-3xl font-semibold mb-4">قصتا</h2>
+				<p className="text-gray-500 leading-relaxed">
+					قصتنا بدأت برغبتنا في خلق تجربة تسوق مميزة وموثوقة تمنحك
+					الأناقة التي تستحقينها
+				</p>
 			</section>
-*/}
-			{/* Why Us */}
+
+			{/* Why Us */}	
 			<section className="max-w-4xl mx-auto">
 				<h2 className="text-3xl font-semibold mb-4">لماذا نحن؟</h2>
-				<div className="grid md:grid-cols-2 gap-6">
+				<div className="grid md:grid-cols-3 gap-6">
 					<div className="p-6 rounded-xl bg-white shadow">
 						<p>
 							التميّز: كل قطعة في مجموعتنا فريدة وحصرية، ولا تجدينها في أي مكان
 							آخر
-						</p>
-						<p>
-							الجودة: نستخدم أقمشة فاخرة مختارة بعناية لنقدم حقائب تجمع بين
-							الفخامة والمتانة في كل تفصيل
 						</p>
 					</div>
 					<div className="p-6 rounded-xl bg-white shadow">
@@ -57,6 +52,12 @@ const Test = () => {
 							هدفنا أن نوفر لكِ تجربة تسوق سهلة ومريحة داخل سوريا،
 							مباشرة إلى باب منزلكِ
 							</p>
+					</div>
+					<div className="p-6 rounded-xl bg-white shadow">
+						<p>
+							الجودة: نستخدم أقمشة فاخرة مختارة بعناية لنقدم حقائب تجمع بين
+							الفخامة والمتانة في كل تفصيل
+						</p>
 					</div>
 				</div>
 			</section>
