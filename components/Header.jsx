@@ -54,7 +54,7 @@ const Header = () => {
   };
 
   return (
-    <div id="hero" className="relative flex justify-center max-sm:-mt-20 items-center h-screen">
+    <div id="hero" className="relative flex justify-center sm:mt-7 max-sm:-mt-20 items-center h-screen">
       <div className="w-full h-[90%] max-sm:h-[60%] flex items-center justify-center overflow-hidden">
         <div className="relative w-full h-full max-h-[100vh] max-w-[100vw] overflow-hidden rounded-xl">
           <div className="absolute inset-0 z-0">
@@ -139,4 +139,3 @@ const Header = () => {
 };
 
 export default Header;
-
