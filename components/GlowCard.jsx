@@ -41,7 +41,7 @@ const GlowCard = ({ card, index, children }) => {
       onMouseMove={handleMouseMove(index)}
       onTouchMove={handleTouchMove(index)}
       className="carde carde-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
-      style={{ touchAction: "none" }}
+      style={{ touchAction: "pan-y" }}
     >
       <div className="glow"></div>
 
