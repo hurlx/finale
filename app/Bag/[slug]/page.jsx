@@ -32,7 +32,7 @@ export default function BagDetailPage(props) {
     : `https://web.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
 
   return (
-    <main dir="rtl" className="min-h-screen p-10 bg-[#faebf2] z-10 relative text-right">
+    <main dir="rtl" className="min-h-screen mt-3 p-10 text-right">
       <div className="max-w-4xl mx-auto flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">{bag.name}</h1>
 
