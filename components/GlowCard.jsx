@@ -14,7 +14,22 @@ const GlowCard = ({ card, index, children }) => {
     const mouseY = e.clientY - rect.top - rect.height / 2;
 
     let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+    angle = (angle + 360) % 360;
 
+    card.style.setProperty("--start", angle + 60);
+  };
+
+  const handleTouchMove = (index) => (e) => {
+    const card = cardRefs.current[index];
+    if (!card) return;
+    if (e.touches.length === 0) return;
+
+    const touch = e.touches[0];
+    const rect = card.getBoundingClientRect();
+    const touchX = touch.clientX - rect.left - rect.width / 2;
+    const touchY = touch.clientY - rect.top - rect.height / 2;
+
+    let angle = Math.atan2(touchY, touchX) * (180 / Math.PI);
     angle = (angle + 360) % 360;
 
     card.style.setProperty("--start", angle + 60);
@@ -24,7 +39,9 @@ const GlowCard = ({ card, index, children }) => {
     <div
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
+      onTouchMove={handleTouchMove(index)}
       className="carde carde-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
+      style={{ touchAction: "none" }}
     >
       <div className="glow"></div>
 
