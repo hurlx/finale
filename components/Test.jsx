@@ -7,7 +7,6 @@ const Test = () => {
 			dir="rtl"
 			className="min-h-screen px-6 py-16 text-gray-800 relative z-10"
 		>
-			{/* Hero Section */}
 			<section className="text-center mb-20">
 				<h1 className="text-5xl font-bold mb-4">من نحن</h1>
 				<p className="text-lg text-gray-500 max-w-2xl mx-auto">
@@ -17,7 +16,6 @@ const Test = () => {
 				</p>
 			</section>
 
-			{/* Our Story */}
 			<section className="max-w-4xl mx-auto mb-16">
 				<h2 className="text-3xl font-semibold mb-4">ٱلية العمل</h2>
 				<p className="text-gray-500 leading-relaxed">
@@ -25,7 +23,6 @@ const Test = () => {
 				</p>
 			</section>
 
-			{/* Services */}
 			<section className="max-w-4xl mx-auto mb-16">
 				<h2 className="text-3xl font-semibold mb-4">قصتا</h2>
 				<p className="text-gray-500 leading-relaxed">
@@ -34,7 +31,6 @@ const Test = () => {
 				</p>
 			</section>
 
-			{/* Why Us */}	
 			<section className="max-w-4xl mx-auto">
 				<h2 className="text-3xl font-semibold mb-4">لماذا نحن؟</h2>
 				<div className="grid md:grid-cols-3 gap-6">
