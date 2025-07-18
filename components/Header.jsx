@@ -13,11 +13,12 @@ const slides = [
 const Header = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [showArrow, setShowArrow] = useState(true);
+  const [showArrow, setShowArrow] = useState(true); // controls arrow visibility
   const imageRef = useRef(null);
   const textRef = useRef(null);
   const router = useRouter();
 
+  // Slide auto change
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -25,6 +26,7 @@ const Header = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Animate text on slide change
   useEffect(() => {
     gsap.fromTo(
       textRef.current,
@@ -33,6 +35,7 @@ const Header = () => {
     );
   }, [currentSlide]);
 
+  // Scroll listener to hide arrow on scroll
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 30) {
@@ -49,6 +52,7 @@ const Header = () => {
     setLoading(true);
     router.push("/Bag");
   };
+
   return (
     <div id="hero" className="relative flex justify-center sm:mt-7 max-sm:-mt-20 items-center h-screen">
       <div className="w-full h-[90%] max-sm:h-[60%] flex items-center justify-center overflow-hidden">
@@ -66,6 +70,7 @@ const Header = () => {
               />
             ))}
           </div>
+
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 gap-6">
             <h1
               ref={textRef}
@@ -74,6 +79,7 @@ const Header = () => {
             >
               <AnimatedTitle1 title={slides[currentSlide].title} isArabic />
             </h1>
+
             <button
               onClick={handleClick}
               disabled={loading}
@@ -90,12 +96,15 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Down Arrow for small screens */}
       <div
   className={`fixed bottom-20 left-1/2 -translate-x-1/2 text-pink-400 text-4xl select-none max-sm:block hidden transition-opacity duration-500 ${
     showArrow ? "opacity-100" : "opacity-0 pointer-events-none"
   }`}
   aria-label="Scroll down"
 >
+        {/* You can replace this SVG with any arrow icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-10 w-10 animate-bounce"
