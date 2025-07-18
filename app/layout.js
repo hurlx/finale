@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import LenisWrapper from "@/components/LenisWrapper";
-import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,19 +21,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}>
         <div className="absolute inset-40 max-sm:inset-20 opacity-60 z-0 pointer-events-none">
-  <img
-    src="/images/Hight Qulity.png"
-    alt="Background Logo"
-    className="w-full h-full object-contain object-center"
-  />
-</div>
-        {children}
+          <img
+            src="/images/Hight Qulity.png"
+            alt="Background Logo"
+            className="w-full h-full object-contain object-center"
+          />
+        </div>
+
+        <main className="relative z-10">
+          {children}
+          <Footer />
+        </main>
+
         <LenisWrapper />
-        <Footer />
       </body>
     </html>
   );
